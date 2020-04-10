@@ -66,6 +66,7 @@ void ListenerManager::processTouchEvents(std::vector<SDL_Event>& events)
         {          
           Event* event = itr->second;
           pointers.erase(itr);
+          event->up();
           dispatch(event);
           delete itr->second;
         }
