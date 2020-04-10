@@ -1,8 +1,7 @@
-#include "stdafx.h"
+#include "zengine.h"
 
 #include "mainscene.h"
-#include "imagemanager.h"
-#include "gizmo.h"
+#include "image.h"
 
 // Minimum virtual display size for portrait orientation
 
@@ -25,6 +24,6 @@ MainScene::~MainScene()
 
 void MainScene::init()
 {
-	Image* img = ImageManager::inst()->getSolid(10, 10, 100, 100, 100, 100);
+	Image* img = new Image("./test.jpg");
 	add(img);
 }
