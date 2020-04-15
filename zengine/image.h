@@ -16,6 +16,8 @@ public:
 
 	virtual void draw();
 
+	Rect getDstRect() { return dst; }
+	
 protected:
 	void init();
 protected:

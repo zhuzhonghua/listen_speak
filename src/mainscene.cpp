@@ -2,6 +2,7 @@
 
 #include "mainscene.h"
 #include "image.h"
+#include "button.h"
 
 // Minimum virtual display size for portrait orientation
 
@@ -24,6 +25,9 @@ MainScene::~MainScene()
 
 void MainScene::init()
 {
-	Image* img = new Image("./test.jpg");
-	add(img);
+	//Image* img = new Image("./test.jpg");
+	//add(img);
+
+	Button* btn = new Button("./test.jpg");
+	add(btn);
 }

@@ -17,5 +17,8 @@ protected:
 class Utils{
 public:
   static Rect rect(int x, int y, int w, int h);
+
+  //static bool overlapScreenPoint(Gizmo* gizmo, Rect rect, Point p);
+  static bool overlapPoint(const Rect& rect, const Point& p);
 };
 };

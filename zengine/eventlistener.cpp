@@ -1,9 +1,8 @@
 #include "zengine.h"
 #include "listenermanager.h"
+#include "eventlistener.h"
 
 using namespace Zengine;
-
-std::vector<EventListener*> EventListener::listeners;
 
 EventListener::EventListener()
 {

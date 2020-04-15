@@ -15,6 +15,7 @@ struct Event{
 	bool down;
 };
 
+class EventListener;
 typedef void (*OnEvent)(EventListener* listener);
 
 class EventListener{

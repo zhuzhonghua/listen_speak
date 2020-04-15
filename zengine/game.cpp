@@ -1,6 +1,7 @@
 #include "zengine.h"
 #include "game.h"
 #include "timing.h"
+#include "listenermanager.h"
 
 using namespace Zengine;
 
@@ -71,6 +72,8 @@ void Game::init()
 		std::string err = Mix_GetError();
 		fatalError("Mix_OpenAudio error " + err);
 	}
+
+  Camera::setMain(new Camera());
 }
 
 void Game::run()
@@ -130,7 +133,7 @@ void Game::processInput()
 		}
 	}
 
-	//TouchScreen::processTouchEvents(_motionEvents);
+	ListenerManager::processEvents(_motionEvents);
 	_motionEvents.clear();
 }
 

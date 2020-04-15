@@ -1,5 +1,6 @@
 #include "zengine.h"
 #include "util.h"
+#include "camera.h"
 
 using namespace Zengine;
 
@@ -32,4 +33,9 @@ Rect Utils::rect(int x, int y, int w, int h)
   rect.h = h;
 
   return rect;
+}
+
+bool Utils::overlapPoint(const Rect& rect, const Point& p)
+{
+  return p.x >= rect.x && p.x < rect.x + rect.w && p.y >= rect.y && p.y < rect.y + rect.h;
 }
